@@ -10,10 +10,10 @@ int main(void)
 
 /**
 * print function with sizeof
-* new line parametre byte(s\n"
+* those function sizeof prints the size of char, int, long long int,long int and float
 */
 
-printf("Size of a char: %zu byte(s)\n", sizeof(char)); /* count size of char */
+printf("Size of a char: %zu byte(s)\n", sizeof(char)); 
 printf("Size of an int: %zu byte(s)\n", sizeof(int));
 printf("Size of a long int: %zu byte(s)\n", sizeof(long));
 printf("Size of a long long int: %zu byte(s)\n", sizeof(long long));
