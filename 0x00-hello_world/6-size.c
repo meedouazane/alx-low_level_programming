@@ -10,6 +10,7 @@ int main(void)
 
 /**
 * print function with sizeof
+* new line parametre byte(s\n"
 */
 
 printf("Size of a char: %zu byte(s)\n", sizeof(char)); /* count size of char */
