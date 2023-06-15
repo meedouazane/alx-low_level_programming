@@ -9,7 +9,7 @@ int main(void)
 {
 
 /**
-* 
+* printf function to print
 * sizeof function print size of each elements
 */
 
