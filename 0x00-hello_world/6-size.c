@@ -11,6 +11,7 @@ int main(void)
 
 /**
 * printf function to print
+*
 * sizeof function print size of each elements 
 */
 printf("Size of a char: %zu byte(s)\n", sizeof(char));
