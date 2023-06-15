@@ -9,8 +9,8 @@ int main(void)
 {
 
 /**
-* print function with sizeof
-* those function sizeof prints the size of char, int, long long int,long int and float
+* 
+* sizeof function print size of each elements
 */
 
 printf("Size of a char: %zu byte(s)\n", sizeof(char)); 
