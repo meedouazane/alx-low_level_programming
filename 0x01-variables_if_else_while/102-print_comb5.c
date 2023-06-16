@@ -20,18 +20,21 @@ int main(void)
 			{
 				for (a = 1; a < 10; a++ )
 				{
-			putchar(i + '0');
-			putchar(b + '0');
-			putchar(' ');
-			putchar(c + '0');
-			putchar(a + '0');
-				if (i == 9 && b == 8 && c == 9 && a==9)
+					if (a != b)
+					{
+					putchar(i + '0');
+					putchar(b + '0');
+					putchar(' ');
+					putchar(c + '0');
+					putchar(a + '0');
+					if (i == 9 && b == 8 && c == 9 && a==9)
 					{
 					break;
 					}
 				else
 				putchar(',');
 				putchar(' ');
+					}
 				}
 			}
 		}
