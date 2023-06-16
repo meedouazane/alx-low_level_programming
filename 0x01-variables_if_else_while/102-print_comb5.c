@@ -9,34 +9,20 @@
 int main(void)
 {
 	int i = 0;
-	int b;
-	int c;
-	int a;
-	for (; i < 10; i++)
+	int b = 0;
+	for (i = 0; i < 100; i++)
 	{
-		for (b = 0; b < 9; b++)
-		{
-			for (c = 0; c < 10; c++)
-			{
-				for (a = 1; a < 10; a++ )
-				{
-					if (a != b)
-					{
-					putchar(i + '0');
-					putchar(b + '0');
-					putchar(' ');
-					putchar(c + '0');
-					putchar(a + '0');
-					if (i == 9 && b == 8 && c == 9 && a==9)
-					{
-					break;
-					}
-				else
+		for (b = i + 1; b < 100; b++)
+		{	
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(b / 10 + '0');
+			putchar(b % 10 + '0');
+				if (i == 98 && b == 99)
+				continue;
 				putchar(',');
 				putchar(' ');
-					}
-				}
-			}
 		}
 	}
 	putchar('\n');
