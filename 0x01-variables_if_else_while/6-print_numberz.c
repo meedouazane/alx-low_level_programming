@@ -8,13 +8,13 @@
 
 int main(void)
 {
-	char alphabets[] = "0123456789\n";
 	int i = 0;
 
-	while (alphabets[i] != 0)
+	while (i < 10)
 	{
-		putchar(alphabets[i]);
+		putchar(i + '0');
 		i++;
 	}
+	printf("\n");
 	return (0);
 }
