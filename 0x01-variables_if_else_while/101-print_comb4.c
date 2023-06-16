@@ -9,14 +9,14 @@
 int main(void)
 {
 	int i = 0;
-	int b ;
-	int c ;
+	int b;
+	int c;
 
 	for (; i < 10; i++)
 	{
 		for (b = i + 1; b < 10; b++)
 		{
-			for (c = b+1; c < 10; c++)
+			for (c = b + 1; c < 10; c++)
 			{
 			if (b != i)
 				{
