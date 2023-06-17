@@ -10,6 +10,7 @@ int main(void)
 {
 	int i = 0;
 	int b = 0;
+
 	for (i = 0; i < 100; i++)
 	{
 		for (b = i + 1; b < 100; b++)
