@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - entery point
  *
- * return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -16,5 +16,5 @@ int main(void)
 	i++;
 	}
 
-return (0);	
-}	
+return (0);
+}
