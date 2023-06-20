@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - entery point
@@ -8,12 +8,13 @@
 
 void print_alphabet(void)
 {
-	char alph[] = "abcdefghijklmnopqrstuvwxyz\n";
-	int i = 0;
+	char c;
 
-	while (alph[i] != 0)
+	c = 'a';
+	while (c != 'z')
 	{
-	putchar(alph[i]);
-	i++;
+	_putchar(c);
+	c++;
 	}
+	_putchar('\n');
 }
