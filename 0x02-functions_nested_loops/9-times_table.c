@@ -1,11 +1,8 @@
 #include "main.h"
-
 /**
  * times_table - prints the 9 times table, starting with 0.
- *
  * Return: Alawys 0 (Success)
  */
-
 void times_table(void)
 {
 	int i, b, c, t, f;
@@ -30,7 +27,6 @@ void times_table(void)
 				_putchar(t + '0');
 				_putchar(f + '0');
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 				}
 				else
