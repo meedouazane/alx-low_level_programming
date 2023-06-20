@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - from a to z
+ * print_alphabet_x10 - from a to z 10 times
  *
  * return: void
  */
@@ -19,7 +19,7 @@ void print_alphabet_x10(void)
 		_putchar(c);
 		c++;
 		}
-	_putchar('\n'); 
+	_putchar('\n');
 	i++;
-	}	
+	}
 }
