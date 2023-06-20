@@ -31,19 +31,17 @@ void times_table(void)
 				}
 				else
 				{
-					if (c < 10 && b != 9)
-					{
+					if (c <= 9 && b != 9)	
 					_putchar(c + '0');
-					}
 					else
-					if (c >= 9 && b == 9)
+					if (c > 9 && b == 9)
 					{
 					t = c / 10;
 					f = c % 10;
 					_putchar(t + '0');
 					_putchar(f + '0');
-					 }
-				}	
+					 }	
+			}	
 		}
 	_putchar('\n');
 	}
