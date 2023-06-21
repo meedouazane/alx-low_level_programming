@@ -16,7 +16,11 @@ int main(void)
 		n = c + b;
 		b = c;
 		c = n;
-		printf("%ld, ", c);
+		printf("%ld", c);
+		if (i != 51)
+		printf(", ");
+		else
+			break;
 	}
 	printf("\n");
 	return (0);
