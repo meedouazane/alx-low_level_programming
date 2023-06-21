@@ -11,7 +11,7 @@ int main(void)
 
 	c = 1;
 	b = 0;
-	for (i = 2; i <= 50; i++)
+	for (i = 2; i <= 51; i++)
 	{
 		n = c + b;
 		b = c;
