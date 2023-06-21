@@ -13,10 +13,10 @@ int main(void)
 	b = 0;
 	for (i = 2; i < 50; i++)
 	{
-		printf("%d, ", c);
 		n = c + b;
 		b = c;
 		c = n;
+		printf("%d, ", c);
 	}
 	printf("\n");
 	return (0);
