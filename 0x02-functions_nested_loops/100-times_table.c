@@ -23,14 +23,14 @@ void print_times_table(int n)
 				_putchar(' ');
 			if (k <= 9)
 				 _putchar(' ');
-				if (k >= 100)
-					{
-					m = k / 100;
-					j = k % 10;
-					_putchar(m + '0');
-					_putchar(j + '0');
-					}
-					else if (k <= 99 && k >= 10)
+			if (k >= 100)
+			{
+			m = k / 100;
+			j = k % 10;
+			_putchar(m + '0');
+			_putchar(j + '0');
+			}
+				else if (k <= 99 && k >= 10)
 					{
 					m = k / 10;
 					_putchar(m + '0');
