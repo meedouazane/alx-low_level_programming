@@ -37,7 +37,10 @@ void times_table(void)
             else
             {
                 if (c <= 9 && b < 9)
+		{
+	  		_putchar(' ');	
                     _putchar(c + '0');
+		 }  
                 else if (c > 9 && b == 9)
                 {
                     t = c / 10;
