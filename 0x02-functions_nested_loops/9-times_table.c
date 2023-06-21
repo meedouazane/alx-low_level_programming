@@ -14,16 +14,16 @@ void times_table(void)
         {
             c = i * b;
 
-            if (c <= 9 && b <= 9)
+            if (c <= 9 && b <= 9 )
             {
                 _putchar(c + '0');
 
-                if (b < 9)
+                if (b < 9 )    
                 {
                     _putchar(',');
                     _putchar(' ');
                     _putchar(' ');
-                }
+		}	
             }
             else if (c >= 9 && b < 9)
             {
@@ -37,10 +37,10 @@ void times_table(void)
             else
             {
                 if (c <= 9 && b < 9)
-		{
-	  		_putchar(' ');	
+                {
+                    _putchar(' ');
                     _putchar(c + '0');
-		 }  
+                }
                 else if (c > 9 && b == 9)
                 {
                     t = c / 10;
