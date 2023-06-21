@@ -19,4 +19,5 @@ int main(void)
 		c = n;
 	}
 	printf("\n");
+	return (0);
 }
