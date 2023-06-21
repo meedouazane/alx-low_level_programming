@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long long i, b, c, n;
+	unsigned long i, b, c, n;
 
 	c = 1;
 	b = 0;
@@ -16,7 +16,7 @@ int main(void)
 		n = c + b;
 		b = c;
 		c = n;
-		printf("%llu, ", c);
+		printf("%lu, ", c);
 	}
 	printf("\n");
 	return (0);
