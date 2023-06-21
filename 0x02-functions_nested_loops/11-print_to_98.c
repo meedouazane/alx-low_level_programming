@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
- * Print_to_98 - printing from n to 98
+/**
+ * print_to_98 - printing from n to 98
+ *
  * @n : giving number
  * Return: Always 0 (Success)
  */
+
 void print_to_98(int n)
 {
 	if (n < 98)
