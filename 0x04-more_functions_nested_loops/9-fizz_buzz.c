@@ -2,6 +2,9 @@
 
 /**
  * main - Entery point
+ *        numbers multiples of 3 will print Fizz
+ *        numbers multiples of 5 will print Buzz
+ *        numbers multiples of 3 and 5 will print FizzBuz
  *
  * Return: Always 0 (Success)
  */
