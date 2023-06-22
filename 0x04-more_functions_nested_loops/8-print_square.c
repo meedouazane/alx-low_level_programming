@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * print_square - draws a diagonal line on the terminal
- *
+ * print_square - draws a square line on the terminal
+ *@size: size of square
  * Return: Always 0 (Success)
  */
 
 void print_square(int size)
 {
 	int i, b;
-	
+
 	if (size <= 0)
 	{
 		_putchar(' ');
 	}
-	else 
+	else
 	{
 		for (i = 0; i < size; i++)
 		{
