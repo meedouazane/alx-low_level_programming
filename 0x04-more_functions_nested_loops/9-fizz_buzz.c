@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entery point
- *
+ * main - print fizz buzz program
  * Return: Always 0 (Success)
  */
 int main(void)
