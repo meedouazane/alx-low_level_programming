@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - print fizz buzz program
  * Return: Always 0 (Success)
