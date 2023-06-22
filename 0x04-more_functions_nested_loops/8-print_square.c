@@ -6,17 +6,23 @@
  * Return: Always 0 (Success)
  */
 
-void print_diagonal(int size)
+void print_square(int size)
 {
 	int i, b;
-
-	for (i = 0; i < size; i++)
+	
+	if (size <= 0)
 	{
-		for (b = 0; b < size; b++)
-		{
-		_putchar('#');
-		}
-		_putchar('\n');
+		_putchar(' ');
 	}
-	_putchar('\n');
+	else 
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (b = 0; b < size; b++)
+			{
+			_putchar(35);
+			}
+		_putchar('\n');
+		}
+	}
 }
