@@ -8,31 +8,14 @@ void print_number(int n)
 {
 	unsigned int j = n;
 
-	if (n >= 1000 && n < 10000)
+	if (n < 0)
 	{
-		_putchar(((n / 1000) % 10) + '0');
-		_putchar(((n / 100) % 10) + '0');
-		_putchar(((n / 1000) % 10) + '0');
-		_putchar((n % 10) + '0');
+	_putchar('_');
+	j = j * -1;
 	}
-	else if (n >= 100 && n < 1000)
+	if ((j / 10) > 0)
 	{
-		_putchar(((n / 100) % 10) + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
+	print_number(j / 10);
 	}
-	else if (n >= 10 && n < 100)
-	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-	}
-	else if (n == 0)
-		_putchar(n + '0');
-	else
-	{
-		j = -j;
-		_putchar('-');
-		_putchar((j / 10) + '0');
-		_putchar((j % 10) + '0');
-	}
+	_putchar((j % 10) + '0');	
 }
