@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * print_number - prints an integer
- *@n : the number that we'll print
- *Return: Always 0 (Success)
+ * @n : the number that we'll print
+ * Return: Always 0 (Success)
  */
 void print_number(int n)
 {
