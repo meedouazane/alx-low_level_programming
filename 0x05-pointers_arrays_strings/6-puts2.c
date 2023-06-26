@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * puts_half - every other character of a string.
+ * puts2 - every other character of a string.
  * @str: string.
  * Return: Always 0 (Success)
  */
 
-void puts_half(char *str)
+void puts2(char *str)
 {
-	int i, n, length;
+	int i, length;
+
 	length = 0;
 
 	while (str[length] != 0)
 		length++;
 
-	n = (length - 1) / 2;
-	for (i = n + 1; i <= length -1; i++)
+	for (i = 0; i <= length - 1; i = i + 2)
 		_putchar(str[i]);
 	_putchar('\n');
 }
