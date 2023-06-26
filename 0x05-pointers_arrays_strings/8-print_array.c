@@ -3,6 +3,7 @@
 /**
  * print_array - print array
  * @n: number of elements of the array
+ * @a: array
  * Return: Always 0 (Success)
  */
 void print_array(int *a, int n)
