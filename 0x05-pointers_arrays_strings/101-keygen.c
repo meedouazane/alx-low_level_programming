@@ -11,7 +11,7 @@
 int main(void)
 {
 	srand(time(NULL));
-	int i = 0;
+	int i;
 	char random[20];
 
 	for (i = 0; i < 20; i++)
