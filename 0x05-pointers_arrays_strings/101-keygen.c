@@ -10,10 +10,10 @@
 
 int main(void)
 {
-	srand(time(NULL));
 	int i;
 	char random[20];
 
+	srand(time(NULL));
 	for (i = 0; i < 20; i++)
 	{
 		random[i] = rand() % 26 + '0';
