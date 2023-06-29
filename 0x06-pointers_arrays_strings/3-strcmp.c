@@ -6,6 +6,7 @@
  * @s2: source string
  * Return: Always 0 (Success)
  */
+
 int _strcmp(char *s1, char *s2)
 {
 	int i, n = 0;
@@ -15,4 +16,5 @@ int _strcmp(char *s1, char *s2)
 	n = s1[i] - s2[i];
 	return (n);
 	}
+	return (0);
 }
