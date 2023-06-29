@@ -8,7 +8,7 @@
 char *cap_string(char *str)
 {
 	int l, i = 0;
-	char Sep[] = {9, 10, 32, 33, 34, 35, 59, 40, 41, 46, 123, 63, 125};
+	char Sep[] = {" ,;.\"!?(){}\t\n"};
 
 for (i = 0; str[i] != 0; i++)
 {
