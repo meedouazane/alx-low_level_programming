@@ -5,23 +5,21 @@
  * @str: string
  * Return: capitalizes value
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
- int i = 0;
- 
- while (s[i] != 0)
-{ 
-while (!(s[i] >= 97 && s[i] <= 122))
-i++;
-if (s[i - 1] == 32 || s[i - 1] == 10 ||
-s[i - 1] == 9 || s[i - 1] == 33 ||
-s[i - 1] == 34 || s[i - 1] == 35 ||
-s[i - 1] == 59 || s[i - 1] == 40 ||
-s[i - 1] == 41 || s[i - 1] == 46 ||
-s[i - 1] == 123 || s[i - 1] == 125 ||
-s[i - 1] == 77 || i == 0)
-s[i] = s[i] - 32;
-i++;
+	int l, i = 0;
+	char Sep[] = " ,;.\"!?(){}\t\n";
+
+for (i = 0; str[i] != 0; i++)
+{
+	for (l = 0; Sep[l] != 0; l++)
+	{
+	if (str[i] == Sep[l])
+	{
+	if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+	str[i + 1] = str[i + 1] - 32;
+	}
+	}
 }
-return (s);
+	return (str);
 }
