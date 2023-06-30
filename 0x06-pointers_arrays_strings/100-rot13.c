@@ -7,7 +7,7 @@
  */
 char *rot13(char *str)
 {
-int i, j = 0;
+int j = 0;
 char am[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char nz[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
