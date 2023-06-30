@@ -7,14 +7,21 @@
  */
 char *rot13(char *str)
 {
-int i = 0;
+int i , j = 0;
+char am[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char nz[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-for (i = 0; str[i] != '\0'; i++)
+while (*str)
 {
-if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
-str[i] = (str[i] + 13);
-else if ((str[i] >= 'm' && str[i] <= 'z') || (str[i] >= 'M' && str[i] <= 'z'))
-str[i] = (str[i] - 13);
+for (j = 0; j <= 52; j++)
+{
+if (*str == am[j])
+{
+*str = nz[j];
+break;
+}
+}
+str++;
 }
 return (str);
 }
