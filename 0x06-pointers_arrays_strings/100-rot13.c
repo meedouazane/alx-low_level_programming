@@ -11,6 +11,7 @@ int j;
 
 char am[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char nz[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+char *k = str;
 
 	while (*str)
 	{
@@ -24,5 +25,5 @@ char nz[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 		}
 		str++;
 	}
-	return (str);
+	return (k);
 }
