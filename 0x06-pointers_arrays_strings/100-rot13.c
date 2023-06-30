@@ -7,21 +7,22 @@
  */
 char *rot13(char *str)
 {
-int j = 0;
+int j;
+
 char am[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char nz[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-while (*str)
-{
-for (j = 0; j <= 52; j++)
-{
-if (*str == am[j])
-{
-*str = nz[j];
-break;
-}
-}
-str++;
-}
-return (str);
+	while (*str)
+	{
+	for (j = 0; j <= 52; j++)
+		{
+		if (*str == am[j])
+			{
+			*str = nz[j];
+			break;
+			}
+		}
+		str++;
+	}
+	return (str);
 }
