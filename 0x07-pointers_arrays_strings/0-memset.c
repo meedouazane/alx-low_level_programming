@@ -4,7 +4,7 @@
  * @s: memory to fills
  * @b: constant byte
  * @n: number of the byte that will be filled
- * return: memory filled
+ * Return: memory @s filled
  */
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -15,5 +15,5 @@ char *_memset(char *s, char b, unsigned int n)
 		s[i] = b;
 		i++;
 	}
-	return (0);
+	return (s);
 }
