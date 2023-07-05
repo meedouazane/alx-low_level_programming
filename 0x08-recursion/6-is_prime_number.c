@@ -30,7 +30,7 @@ int _sqrt_recursion(int n)
  * prime_number- check if number is prime number
  * @n: input number.
  * @i: starting number
- * return: 1 if the input integer is a prime number, otherwise return 0
+ * Return: 1 if the input integer is a prime number, otherwise return 0
  */
 
 int prime_number(int n, int i)
