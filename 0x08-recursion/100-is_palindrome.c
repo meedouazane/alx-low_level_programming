@@ -5,6 +5,7 @@
  * end: starting from last digit.
  * @s: input string
  * return: 0 or 1 if it's palindrome.
+ * Return: returns length of a string
  */
 int _strlen_recursion(char *s);
 int is_palindrome(char *s);
@@ -37,6 +38,7 @@ int is_palindrome(char *s)
  * _strlen_recursion- returns the length of a string
  * @s: input string
  * Return: length of a string
+ *return: lenghth.
  */
 
 int _strlen_recursion(char *s)
