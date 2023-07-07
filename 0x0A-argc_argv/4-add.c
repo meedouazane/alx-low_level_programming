@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 				if (a[j] < '0' || a[j] > '9')
 				{
 					printf("Error\n");
-					return 1;
+					return (1);
 				}
 			}
 			sum += atoi(a);
@@ -37,6 +37,6 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	return 0;
+	return (0);
 }
 
