@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main- entery of the program
+ * @argc:number of arguments being passed into a program
+ * @argv:array of arguments
+ * Return: 0 (Success)
+ */
+
+int main(int argc, char *argv[])
+{
+	int i = 0;
+	int sum[i];
+
+	for (i = 0; i < argc; i++)
+	{
+		if (argv[i] < 48 && argv[i] > 57  )
+		{
+			printf("Error\n");
+			return (0);
+		}
+		else 
+			sum[i] += atoi(argv[i]);
+	}
+		printf("%ls\n", sum);
+	return (0);
+}
