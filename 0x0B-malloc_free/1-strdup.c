@@ -18,6 +18,9 @@ char *_strdup(char *str)
 	if (p == NULL)
 		return (p);
 
+	if (str == NULL)
+		return (NULL)
+
 	while (i < length)
 	{
 		*(p + i) = *(str + i);
