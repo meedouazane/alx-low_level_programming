@@ -11,8 +11,6 @@ char *str_concat(char *s1, char *s2)
 	int i, b, l1, l2 = 0;
 	int length = 0;
 
-	if (s1 == NULL && s2 == NULL)
-		return (0);
 	if (s1 == NULL || s2 == NULL)
 		return ("");
 
@@ -33,5 +31,6 @@ char *str_concat(char *s1, char *s2)
 	i++;
 	b++;
 	}
+	*(p + i) = '\0';
 	return (p);
 }
