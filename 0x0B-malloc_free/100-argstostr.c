@@ -15,26 +15,25 @@ int length = 0;
 char *k;
 int t = 0;
 
-if (ac == 0 || av == NULL)
-return NULL;
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
-for (i = 0; i < ac; i++)
-length += strlen(av[i]);
+	for (i = 0; i < ac; i++)
+		length += strlen(av[i]);
 
-k = (char *)malloc((length + ac + 1) * sizeof(char));
-if (k == NULL)
-return NULL;
+	k = (char *)malloc((length + ac + 1) * sizeof(char));
+		if (k == NULL)
+			return (NULL);
 
-for (i = 0; i < ac; i++)
-{
-for (j = 0; av[i][j] != '\0'; j++)
-k[t++] = av[i][j];
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			k[t++] = av[i][j];
 
-if (i != ac - 1)
-k[t++] = '\n';
+		if (i != ac - 1)
+			k[t++] = '\n';
+	}
+	k[t] = '\n';
 
-}
-k[t] = '\n';
-
-return k;
+	return (k);
 }
