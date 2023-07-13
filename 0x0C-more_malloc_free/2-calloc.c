@@ -12,7 +12,7 @@ int *p;
 if (nmemb == 0 || size == 0)
 return (NULL);
 
-p = (int *)malloc((size * nmemb) * sizeof(int));
+p = (int *)malloc((size * nmemb));
 if (p == NULL)
 return (NULL);
 
