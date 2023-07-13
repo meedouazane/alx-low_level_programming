@@ -8,6 +8,7 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	void *k;
 	ptr = malloc(old_size);
 	if (ptr == NULL)
 		ptr = malloc(new_size);
@@ -21,6 +22,9 @@ return (NULL);
 if (new_size == old_size)
 return (ptr);
 else
-ptr = malloc(new_size);
+{
+k = malloc(new_size);
+ptr = k;
+}
 return (ptr);
 }
