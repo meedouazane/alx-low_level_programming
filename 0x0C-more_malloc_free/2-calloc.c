@@ -7,14 +7,14 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *p;
-	int i, length = 0;
+	char *p;
+	int i = 0, length = 0;
 
 	length = nmemb * size;
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	p = (int *)malloc(length);
+	p = malloc(length);
 	if (p == NULL)
 		return (NULL);
 
