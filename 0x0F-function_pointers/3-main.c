@@ -8,7 +8,6 @@
 int main(int argc, char **argv)
 {
 	int a, b = 0;
-	int result = 0;
 	int (*op)(int, int);
 	
 	if (argc != 4)
@@ -22,8 +21,7 @@ int main(int argc, char **argv)
 
 	if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
 		printf("Error\n"), exit(99);
-	result = op(a, b);
-	printf("%d\n", result);
+	printf("%d\n", op(a, b));
 	return (0);
 }
 
