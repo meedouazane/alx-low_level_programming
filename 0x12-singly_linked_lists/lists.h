@@ -14,8 +14,6 @@ typedef struct list_s
 	unsigned int len;
 	struct list_s *next;
 } list_t;
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 size_t print_list(const list_t *h);
 
