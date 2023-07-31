@@ -11,7 +11,7 @@ size_t print_listint(const listint_t *h)
 	const listint_t *curr;
 
 	if (h == NULL)
-		printf("Error\n");
+		exit(1);
 	curr = h;
 	while (curr != NULL)
 	{
