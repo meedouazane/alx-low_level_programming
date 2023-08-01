@@ -8,7 +8,7 @@ size_t free_listint_safe(listint_t **h)
 {
 	listint_t *curr;
 	listint_t *next;
-	int c = 0;
+	size_t c = 0;
 
 	if (*h == NULL)
 		return (0);
