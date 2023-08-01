@@ -7,25 +7,20 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t c = 0, i = 0;
+	size_t c = 0, size = 0, i = 0;
 	const listint_t *curr;
-	const listint_t *visited[1024] = {NULL};
 
 	if (head == NULL)
 		return (98);
+	size = sizeof(listint_t);
 	curr = head;
-	while (curr != NULL)
+	while (curr != NULL && size > i)
 	{
-		for (; i < c; i++)
-		{
-			if (visited[i] == curr)
-				return (98);
-		}
-		visited[c] = curr;
-
 		printf("[%p] %d\n", (void *)curr, curr->n);
 		curr = curr->next;
 		c++;
+		i++;
 	}
+	printf("-> [%p] %ld\n", (void *)curr, c);
 	return (c);
 }
