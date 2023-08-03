@@ -14,7 +14,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (n == 0)
 		return (-1);
 
-	numBits = sizeof(n) * 8;
+	numBits = sizeof(n);
 	for (i = numBits - 1; i >= 0; i--)
 	{
 		if ((n >> i) & 1)
