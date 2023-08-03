@@ -12,6 +12,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	int k = 0, idx;
 
 	numBits = sizeof(n) * 8;
+	if (index >= numBits)
+		return (-1);
+
 	for (i = numBits - 1; i >= 0; i--)
 	{
 		if ((n >> i) & 1)

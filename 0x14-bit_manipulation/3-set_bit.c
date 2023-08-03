@@ -7,7 +7,7 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (n == NULL || index == NULL)
+	if (n == NULL)
 		return (-1);
 	*n |= (1UL << index);
 	return (1);
