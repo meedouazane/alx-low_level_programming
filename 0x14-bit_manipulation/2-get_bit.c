@@ -11,10 +11,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int l = 1, numBits;
 	int k = 0, idx;
 
-	if (n == 0)
-		return (0);
-
-	numBits = sizeof(n);
+	numBits = sizeof(n) * 8;
 	for (i = numBits - 1; i >= 0; i--)
 	{
 		if ((n >> i) & 1)
@@ -23,8 +20,6 @@ int get_bit(unsigned long int n, unsigned int index)
 			break;
 		}
 	}
-	if (index > l)
-		return (-1);
 	idx = index;
 	for (i = l; i >= 0; i--)
 	{
