@@ -16,22 +16,26 @@ int _strlen(char *s)
 	return (len);
 }
 /**
- * append_text_to_file- appends text at the end of a file.
- * @filename: the name of the file.
- * @text_content: NULL terminated string to add at the end of the file.
- * Return: 1 on success and -1 on failure.
+ * create_file- creates a files.
+ * @filename: the name of the file to create.
+ * @text_content: NULL terminated string to write to the file.
+ * Return: 1 on success, -1 on failure.
  */
-int append_text_to_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
-	int fd, l = 0, ap;
+	int f;
+	ssize_t wr = 0, length;
 
-	l = _strlen(text_content);
+	length = _strlen(text_content);
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_APPEND);
-	ap = write(fd, text_content, l);
-	if (fd == -1 || ap == -1)
+
+	f = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	if (f == -1)
 		return (-1);
-	close(fd);
+	wr = write(f, text_content, length);
+	if (wr == -1)
+		return (-1);
+	close(f);
 	return (1);
 }
