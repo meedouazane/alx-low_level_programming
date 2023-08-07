@@ -23,19 +23,20 @@ int _strlen(char *s)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f;
+	int f, length;
 	ssize_t wr;
 
+	length = _strlen(text_content);
 	if (filename == NULL)
 		return (-1);
 
-	f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IWUSR);
 	if (f == -1)
 		return (-1);
-
-	wr = write(f, text_content, _strlen(text_content));
+	if (length)
+		wr = write(f, text_content, length);
 	if (wr == -1)
 		return (-1);
 	close(f);
-	return (wr == _strlen(text_content) ? 1 : -1);
+	return (wr == length ? 1 : -1);
 }
