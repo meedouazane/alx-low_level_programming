@@ -22,10 +22,15 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	ft = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (ft == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
 	while ((rd = read(ff, buffer, sizeof(buffer))) > 0)
 	{
 		wr = write(ft, buffer, rd);
-		if (wr == -1 || ft == -1)
+		if (wr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
