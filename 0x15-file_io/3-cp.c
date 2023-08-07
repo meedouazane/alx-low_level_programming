@@ -5,7 +5,7 @@
  * @av: array of arg being passed.
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(int ac, char *av)
 {
 	char buffer[1024];
 	int ff = 0, ft = 0, wr = 0, rd = 0;
