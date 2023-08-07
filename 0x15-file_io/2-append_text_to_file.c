@@ -23,10 +23,10 @@ int _strlen(char *s)
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd , l, ap = 0;
+	int fd, l = 0, ap;
 
 	l = _strlen(text_content);
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 	fd = open(filename, O_WRONLY | O_APPEND);
 	ap = write(fd, text_content, l);
