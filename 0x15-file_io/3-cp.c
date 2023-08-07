@@ -29,6 +29,11 @@ int main(int ac, char **av)
 	}
 	while ((rd = read(ff, buffer, sizeof(buffer))) > 0)
 	{
+		if(rd == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			exit(98);
+		}
 		wr = write(ft, buffer, rd);
 		if (wr == -1)
 		{
