@@ -21,7 +21,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	ft = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	ft = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	while ((rd = read(ff, buffer, 1024)) > 0)
 	{
 		wr = write(ft, buffer, rd);
