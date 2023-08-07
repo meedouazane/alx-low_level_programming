@@ -24,15 +24,17 @@ int _strlen(char *s)
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int f;
-	ssize_t ap;
+	ssize_t ap, length;
 
+	length = _strlen(text_content);
 	if (filename == NULL)
 		return (-1);
 
 	f = open(filename, O_WRONLY | O_APPEND);
 	if (f == -1)
 		return (-1);
-	ap = write(f, text_content, _strlen(text_content));
+	if (length)
+	ap = write(f, text_content, length);
 	if (ap == -1)
 	{
 		close(f);
