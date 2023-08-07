@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * main - check the code
- *
+ * @ac: number of arg being passed.
+ * @av: array of arg being passed.
  * Return: Always 0.
  */
 int main(int ac, char **av)
@@ -20,7 +21,7 @@ int main(int ac, char **av)
 	if (file_from == NULL)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
-		exit (98);
+		exit(98);
 	}
 	ff = open(file_from, O_RDONLY);
 	ft = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -38,7 +39,7 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't close fd %d\n", ff);
 		exit(100);
 	}
-	if(close(ft) == -1)
+	if (close(ft) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", ft);
 		exit(100);
