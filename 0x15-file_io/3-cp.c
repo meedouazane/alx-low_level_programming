@@ -29,11 +29,6 @@ int main(int ac, char **av)
 	}
 	while ((rd = read(ff, buffer, sizeof(buffer))) > 0)
 	{
-		if(rd == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-			exit(98);
-		}
 		wr = write(ft, buffer, rd);
 		if (wr == -1)
 		{
@@ -41,7 +36,9 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	}
-	if (close(ff) == -1)
+	close(ff);
+	close(ft);
+/**	if (close(ff) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff);
 		exit(100);
@@ -50,6 +47,6 @@ int main(int ac, char **av)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
 		exit(100);
-	}
+	}*/
 	return (0);
 }
