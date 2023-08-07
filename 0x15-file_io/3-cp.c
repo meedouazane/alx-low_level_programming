@@ -1,4 +1,20 @@
 #include "main.h"
+char buffer(char *file)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", file);
+		exit(99);
+	}
+
+	return (buffer);
+}
+
 /**
  * main - check the code
  * @ac: number of arg being passed.
@@ -7,9 +23,10 @@
  */
 int main(int ac, char **av)
 {
-	char *file_from = av[1], *file_to = av[2], buffer[1024];
+	char *file_from = av[1], *file_to = av[2], *buffer;
 	int ff, ft, wr, rd;
 
+	buffer = buffer(av[2]);
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
