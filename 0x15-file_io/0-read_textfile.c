@@ -16,7 +16,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	while ((t = getc(f)) != EOF && c < letters)
 	{
-		write(1, &t, 1);
+		if ((write(1, &t, 1)) != 1)
+			return (0);
 		c++;
 	}
 	fclose(f);
