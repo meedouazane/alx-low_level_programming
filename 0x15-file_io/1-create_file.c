@@ -23,8 +23,8 @@ int _strlen(char *s)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f, length;
-	ssize_t wr;
+	int f;
+	ssize_t wr = 0, length;
 
 	length = _strlen(text_content);
 	if (filename == NULL)
