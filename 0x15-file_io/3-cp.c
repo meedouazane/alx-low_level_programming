@@ -8,7 +8,7 @@
 int main(int ac, char **av)
 {
 	char *file_from = av[1], *file_to = av[2], buffer[1024];
-	int ff, ft, wr, rd;
+	int ff = 0, ft = 0, wr = 0, rd = 0;
 
 	if (ac != 3)
 	{
