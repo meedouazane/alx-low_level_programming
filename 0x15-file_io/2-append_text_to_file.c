@@ -23,14 +23,13 @@ int _strlen(char *s)
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t ap = 0, length;
+	int fd , l, ap = 0;
 
-	length = _strlen(text_content);
+	l = _strlen(text_content);
 	if (!filename)
 		return (-1);
 	fd = open(filename, O_WRONLY | O_APPEND);
-	ap = write(fd, text_content, length);
+	ap = write(fd, text_content, l);
 	if (fd == -1 || ap == -1)
 		return (-1);
 	close(fd);
