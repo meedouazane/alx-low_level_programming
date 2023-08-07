@@ -7,8 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	char *file_from = av[1], *file_to = av[2];
-       	char *buffer;
+	char *file_from = av[1], *file_to = av[2], buffer[1024];
 	int ff, ft, wr, rd;
 
 	if (ac != 3)
@@ -16,13 +15,6 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	 buffer = malloc(1024);
-        if (buffer == NULL)
-        {
-                dprintf(STDERR_FILENO,"Error: Can't write to %s\n", av[2]);
-                exit(99);
-        }
-
 	ff = open(file_from, O_RDONLY);
 	if (ff == -1)
 	{
