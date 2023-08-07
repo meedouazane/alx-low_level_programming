@@ -36,9 +36,7 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	}
-	close(ff);
-	close(ft);
-/**	if (close(ff) == -1)
+	if (close(ff) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff);
 		exit(100);
@@ -47,6 +45,6 @@ int main(int ac, char **av)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
 		exit(100);
-	}*/
+	}
 	return (0);
 }
