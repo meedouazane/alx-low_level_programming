@@ -51,12 +51,12 @@ int main(int ac, char **av)
 		exit(98);
 	}
 
-/**	if (memcmp(header.e_ident, ELFMAG, SELFMAG) != 0)
+	if (header.e_ident[0] != 0x7f)
 	{
 		dprintf(STDERR_FILENO, "Error: %s is not an ELF file\n", av[0]);
 		exit(98);
 	}
-*/
+
 	print_elf(&header);
 	if (close(f))
 	{
