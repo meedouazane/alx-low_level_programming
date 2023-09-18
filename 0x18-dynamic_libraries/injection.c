@@ -2,5 +2,11 @@
 #include <stdlib.h>
 int rand(void)
 {
-	return(9);
+	int a[] = {9, 8, 10, 24, 75, 9};
+	int i = 0;
+	while (a[i])
+	{
+		return(a[i]);
+		i++;
+	}
 }

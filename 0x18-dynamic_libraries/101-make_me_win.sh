@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -fpic -shared injection.c -o injection.so
+wget https://github.com/meedouazane/alx-low_level_programming/blob/master/0x18-dynamic_libraries/injection.so
 LD_PRELOAD=./injection.so
