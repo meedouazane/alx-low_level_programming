@@ -6,6 +6,21 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *current;
+	unsigned long int i;
+	int comma = 0;
 
-	current = ht->
+	if (!ht)
+		return;
+	printf("{");
+	for (i = 0; i < ht->size; i++)
+	{
+		if (ht->array[i])
+		{
+			if (comma)
+				printf(", ");
+			printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+			comma = 1;
+		}
+	}
+	printf("}\n");
+}
